@@ -103,10 +103,17 @@ function signal()
 
 function listSignaledComments()
 {
+    if(isset($_SESSION['authentification']) && $_SESSION['role'] = 'admin'){
+
     $commentManager = new CommentManager();
     $signaledComments = $commentManager->getSignaledComments();
 
     require('view/backend/adminSignaledCommentsView.php');
+    }
+     else {
+          require('view/frontend/form_admin.php');
+    }
+
 }
 
 function postAdmin()
@@ -138,9 +145,16 @@ function deleteC()
 
 function adminView()
 {
-	$postManager = new PostManager(); // Création d'un objet
-    $posts = $postManager->getPosts(); // Appel d'une fonction de cet objet  
-	      require('view/backend/adminView.php');
+    if(isset($_SESSION['authentification']) && $_SESSION['role'] = 'admin'){
+	$postManager = new PostManager(); 
+    $posts = $postManager->getPosts();  
+	
+    require('view/backend/adminView.php');
+    }
+    
+    else {
+          require('view/frontend/form_admin.php');
+    }
 }
 
 function formAdmin()
@@ -216,7 +230,14 @@ function formContact()
 
 function formAddPost()
 {
-    require('view/backend/adminAddPostView.php') ;
+    if(isset($_SESSION['authentification']) && $_SESSION['role'] = 'admin'){
+   
+    require('view/backend/adminAddPostView.php') ;    
+     }
+      else {
+          require('view/frontend/form_admin.php');
+    }
+    
 }
 
 function aPropos()
@@ -224,13 +245,10 @@ function aPropos()
    require('view/frontend/aPropos.php') ;
 }
 
-
 function p404()
 {
    require('view/frontend/404.php') ;
 }
-
-
 
 function addPost()
 
@@ -246,7 +264,7 @@ function addPost()
                 $postManager = new PostManager();
                 $addedLines = $postManager->postPost($title,$content);
 
-                $posts = $postManager->getPosts(); // Appel d'une fonction de cet objet
+                $posts = $postManager->getPosts(); 
 
                 if ($addedLines === false ) {
                      throw new Exception('Impossible d\'ajouter le billet !');
@@ -261,9 +279,6 @@ function addPost()
                 throw new Exception('Auteur ou contenu vide !');
         }    
 }
-
-
-
 
 function editPost()
 
@@ -327,10 +342,10 @@ function deleteP()
     $postId = $_GET['id'];
 
     $postManager = new PostManager();
- /*/   $post = $postManager->getPost($_GET['id']); */
+ 
     $deletedPostLines = $postManager->deletePost($postId);
 
-    $posts = $postManager->getPosts(); // Appel d'une fonction de cet objet
+    $posts = $postManager->getPosts();
 
      if ($deletedPostLines === false) {
         throw new Exception('Impossible de supprimer le billet !');

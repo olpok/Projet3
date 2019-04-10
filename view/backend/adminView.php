@@ -11,10 +11,12 @@
 
 
 <h1>Billet simple pour l'Alaska</h1>
-<p>Derniers billets du blog :</p>
+<p>Derniers articles du blog :</p>
 
+           <p> <a href="./index.php?action=formAddPost">Ajouter</a> </p>
 
-<!-- ... -->
+           <!--        <a class="dropdown-item" href="index.php?action=formAddPost">Ajouter article</a>-->
+<!-- ... 
     <div>
 
 <h2>AJOUTER</h2>
@@ -27,11 +29,7 @@
     <div>
         <label for="content">Contenu</label><br />        
       <textarea id="content" name="content"></textarea> 
-      <!--  <textarea class="single-textarea" id="content" name="content" placeholder="Contenu" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Contenu'" required>      
-        </textarea> -->
             
-  
-
     </div>
     <div>
         <input type="submit" />
@@ -39,7 +37,7 @@
 </form>
 
     </div>
-<!-- ... -->
+ ... -->
 
 
 <?php while ($data = $posts->fetch()):?>

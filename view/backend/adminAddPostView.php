@@ -11,7 +11,7 @@
 
 
 <h1>Billet simple pour l'Alaska</h1>
-<p>Derniers billets du blog :</p>
+<p>Derniers articles du blog :</p>
 
 
 <!-- ... -->
@@ -26,9 +26,10 @@
     </div>
     <div>
         <label for="content">Contenu</label><br />        
-   <!--     <textarea id="content" name="content"></textarea> -->
-      <textarea class="single-textarea" id="content" name="content" placeholder="Contenu" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Contenu'" required>      
+   <textarea id="content" name="content" rows="10" cols="10"></textarea> 
+      <!--     <textarea class="single-textarea" id="content" name="content"   placeholder="Contenu" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Contenu'" required>   -->   
         </textarea> 
+
     </div>
     <div>
         <input type="submit" />
