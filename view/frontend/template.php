@@ -71,6 +71,7 @@
 										<a href="index.php?action=login">Admin</a>
 										<div class="dropdown-menu">
 									        <a class="dropdown-item" href="single.html">Articles</a>
+									        <a class="dropdown-item" href="index.php?action=formAddPost">Ajouter article</a>
 									        <a class="dropdown-item" href="index.php?action=listSignaledComments">Commentaires</a>
 									    </div>
 									</li>

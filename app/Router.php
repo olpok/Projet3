@@ -18,6 +18,7 @@ class Router
                         'login'     => 'formAdmin',
                         'signing' => 'signing',
                         'adminView' => 'adminView',
+                        'formAddPost' => 'formAddPost',
                         'listSignaledComments' => 'listSignaledComments',
                         'contact'     => 'formContact',
                         'aPropos' =>'aPropos',

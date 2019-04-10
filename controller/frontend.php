@@ -214,6 +214,11 @@ function formContact()
    require('view/frontend/formContact.php') ;
 }
 
+function formAddPost()
+{
+    require('view/backend/adminAddPostView.php') ;
+}
+
 function aPropos()
 {
    require('view/frontend/aPropos.php') ;
