@@ -1,5 +1,5 @@
 
-<?php $title = 'Blog de Jean Forteroche'; ?>
+<?php //$title = 'Blog de Jean Forteroche'; ?>
 <?php ob_start();?>
 
     <div class="container">
@@ -7,10 +7,10 @@
   
         <h1>Mon super blog !</h1> 
 
-        <p><a href="index.php?action=adminView">Retour à la liste des articles</a></p>
+        <p><a href="index.php?action=login">Retour à la liste des articles</a></p>
 
 
-        <h2>Commentaires prioritaires</h2>
+        <h2>Commentaires signalés</h2>
 
         <?php  while ($comment = $signaledComments->fetch()): ?>
 
@@ -23,12 +23,5 @@
    </div>
 
 <?php $content = ob_get_clean()?>
-
 <?php require('view/frontend/template.php')?>
 <?php require('view/frontend/footer.php')?>
-
-
-<script src="public/tinymce/tinymce.min.js"></script>
-<script>tinymce.init({       
-        selector:'textarea' });
-</script>

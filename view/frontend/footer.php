@@ -8,9 +8,8 @@
                         <div class="col-lg-3  col-md-12">
                             <div class="single-footer-widget">
                                 <h6>MÉTA</h6>
-                                <ul class="footer-nav">
+                                <ul class="footer-nav"> 
                                     <li><a href="index.php?action=login">Administration</a></li>
-                                    <li><a href="index.php?action=logout">Deconnexion</a></li>
                                     <li><a href="#">Mentions legales</a></li>
                                 </ul>
                             </div>

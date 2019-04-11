@@ -1,10 +1,5 @@
 
-<?php $title = 'Blog de Jean Forteroche'; ?>
-
-
-
-
-
+<?php //$title = 'Blog de Jean Forteroche'; ?>
 
 <?php ob_start(); ?>
 
@@ -23,7 +18,6 @@
         
         <p>
             <?= wordwrap($data['content'],20) ?>
-          <!--  <br /> -->
             <em><a href="./index.php?action=post&id=<?= $data['id'] ?>">Commentaires</a></em>
         </p>
 

@@ -22,7 +22,6 @@ class Router
                         'aPropos' =>'aPropos',
                         'addComment' => 'addComment',
                         'edit' => 'edit',
-                        'updateC' => 'updateC',
                         'deleteC' => 'deleteC',
                         'addPost' => 'addPost',
                         'editPost' => 'editPost',

@@ -60,22 +60,6 @@ function addComment()
 
     require('view/frontend/commentView.php');
 }
-/*
-function updateC()
-{ 
-   $postId = $_GET['id']; 
-
-    $commentManager = new CommentManager();
-    $updatedlines = $commentManager->updateComment($_POST['id'],$_POST['author'],$_POST['comment'],$postId, 0); 
-
-  if ($updatedLines === false) {
-        throw new Exception('Impossible de modifier le commentaire !');
-    }
-    else {
-   header('Location: index.php?action=post&id=' . $postId); 
-    }     
-}
-*/
 
 function signal()
 { 
@@ -126,20 +110,6 @@ function deleteC()
         header('Location: index.php?action=editPost&id=' . $_GET['id']);
     }
 }
-/*
-function adminView()
-{
-    if(isset($_SESSION['authentification']) && $_SESSION['role'] = 'admin'){
-
-        $postManager = new PostManager(); 
-        $posts = $postManager->getPosts();  
-	
-        require('view/backend/adminView.php');
-    }    
-     else {
-          require('view/frontend/form_admin.php');
-    }
-}*/
 
 function formAdmin()
 {
@@ -191,14 +161,9 @@ function signing ()
                 $_SESSION['flashMessage'] = 'Identifiant n\'existe pas !';
        } 
 
-	}
-
- //   $postManager = new PostManager(); 
-  //  $posts = $postManager->getPosts(); 
+	} 
 
     header('Location: index.php?action=login');
-
-//    require('view/backend/adminView.php');
 }
 
 function logout()

@@ -20,7 +20,7 @@
 
 		<title>Projet 3</title>
 
- <!--       <title><?= $title ?></title>
+        <!--  <title><?= $title ?></title>
         <?php $title = 'Blog de Jean Forteroche'; ?> -->
         
 
@@ -62,11 +62,7 @@
 						  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
 						    <ul class="navbar-nav">
 								<li><a href="index.php?action=home">Home</a></li>
-								<?php if(isset($_SESSION['authentification']) && $_SESSION['role'] = 'admin')?>:
-
-								<!--//if(isset($_SESSIon('authen')) &&  AND $_SESSION('role') == "role_admin") : 
-
-								<!-<?php if(1==1):?>-->
+								<?php if(isset($_SESSION['authentification']) && $_SESSION['role'] = 'admin') : ?>
 									<li class="dropdown">
 										<a href="index.php?action=login">Admin</a>
 										<div class="dropdown-menu">
@@ -129,51 +125,7 @@
 
 
         <?= $content ?>
-
-
-
-
-          <!-- start footer Area     
-            <footer class="footer-area section-gap">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3  col-md-12">
-                            <div class="single-footer-widget">
-                                <h6>Top Products</h6>
-                                <ul class="footer-nav">
-                                    <li><a href="index.php?action=login">Connexion</a></li>
-                                    <li><a href="index.php?action=logout">Deconnexion</a></li>
-                                    <li><a href="#">Power Tools</a></li>
-                                    <li><a href="#">Marketing Service</a></li>
-
-        <p>
-            <em><a href="index.php?action=login">Connexion</a></em>
-        </p>
-            <em><a href="index.php?action=logout">Deonnexion</a></em>
-
-                                </ul>
-                            </div>
-  						</div>
-                      </div>                      
-                   </div>
-
-
-             </footer>
-
-            < End footer Area        
-   
-
-			<script src="public/js/vendor/jquery-2.2.4.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-			<script src="public/js/vendor/bootstrap.min.js"></script>
-			<script src="public/js/jquery.ajaxchimp.min.js"></script>
-			<script src="public/js/parallax.min.js"></script>			
-			<script src="public/js/owl.carousel.min.js"></script>		
-			<script src="public/js/jquery.magnific-popup.min.js"></script>				
-			<script src="public/js/jquery.sticky.js"></script>
-			<script src="public/js/main.js"></script>	
-
-       -->     
+            
     </body>
 </html>
 

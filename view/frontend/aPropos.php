@@ -1,4 +1,4 @@
-<?php $title = 'Mon blog'; ?> 
+<?php //$title = 'Mon blog'; ?> 
 <?php ob_start(); ?>
 
 
@@ -14,11 +14,9 @@
          
                
         </div>
-         
-
      
       </section>
-      <!-- End Sample Area -->
+<!-- End Sample Area -->
 
 
 <?php $content = ob_get_clean(); ?>

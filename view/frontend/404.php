@@ -1,27 +1,19 @@
-<?php $title = 'Mon blog'; ?> 
+<?php //$title = 'Mon blog'; ?> 
 <?php ob_start(); ?>
 
 
 <!-- Start Sample Area -->
       <section class="sample-text-area">
-        <div class="container">
-   
-          <p class="sample-text">
 
-            <h3 class="mb-30">A propos</h3>
+        <div class="container">   
 
-            Erreur 404
-
-
-          </p>       
-         
+            <h3 class="mb-30">Erreur 404</h3>         
                
         </div>
-         
-
+       
      
       </section>
-      <!-- End Sample Area -->
+ <!-- End Sample Area -->
 
 
 <?php $content = ob_get_clean(); ?>
