@@ -7,10 +7,10 @@
   
         <h1>Mon super blog !</h1> 
 
-        <p><a href="index.php?action=adminView">Retour à la liste de billets</a></p>
+        <p><a href="index.php?action=adminView">Retour à la liste des articles</a></p>
 
 
-  <h2>Commentaires prioritaires</h2>
+        <h2>Commentaires prioritaires</h2>
 
         <?php  while ($comment = $signaledComments->fetch()): ?>
 
@@ -20,7 +20,7 @@
 
         <?php endwhile ?>
 
- </div>
+   </div>
 
 <?php $content = ob_get_clean()?>
 

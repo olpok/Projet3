@@ -62,7 +62,7 @@
 						  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
 						    <ul class="navbar-nav">
 								<li><a href="index.php?action=home">Home</a></li>
-								<?php if(isset($_SESSION['authentification']) && $_SESSION['role'] = 'admin')?>
+								<?php if(isset($_SESSION['authentification']) && $_SESSION['role'] = 'admin')?>:
 
 								<!--//if(isset($_SESSIon('authen')) &&  AND $_SESSION('role') == "role_admin") : 
 
@@ -70,9 +70,10 @@
 									<li class="dropdown">
 										<a href="index.php?action=login">Admin</a>
 										<div class="dropdown-menu">
-									        <a class="dropdown-item" href="index.php?action=login">Articles</a>
+									    	<!--  <a class="dropdown-item" href="index.php?action=login">Articles</a> --> 
 									        <a class="dropdown-item" href="index.php?action=formAddPost">Ajouter article</a>
 									        <a class="dropdown-item" href="index.php?action=listSignaledComments">Commentaires</a>
+									        <a class="dropdown-item" href="index.php?action=logout">Déconnexion</a>
 									    </div>
 									</li>
 								<?php endif;?>
@@ -81,7 +82,7 @@
 								<li><a href="#news">Rechercher</a></li>
 								<li><a href="index.php?action=contact">Contact</a></li>
 
-								<!-- Dropdown -->
+								<!-- Dropdown -
 							    <li class="dropdown">
 							      <a class="dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
 							        Pages
@@ -92,7 +93,7 @@
 							        <a class="dropdown-item" href="archive.html">Archive</a>
 							        <a class="dropdown-item" href="generic.html">Generic</a>
 							        <a class="dropdown-item" href="elements.html">Elements</a>
-							      </div>
+							      </div>-->
 							    </li>								
 						    </ul>
 						  </div>						
