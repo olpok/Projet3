@@ -13,7 +13,9 @@
   <h2>Commentaires prioritaires</h2>
 
         <?php  while ($comment = $signaledComments->fetch()): ?>
-             <p><span class="author"><?= htmlspecialchars($comment['author'])?></span> le <?= $comment['comment_date_fr']?></p>
+
+             <p> <b> article <?= $comment['post_id']?> </b> </p>
+             <p> <span class="author"><?= htmlspecialchars($comment['author'])?></span> le <?= $comment['comment_date_fr']?></p>
             <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
 
         <?php endwhile ?>
