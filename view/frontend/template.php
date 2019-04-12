@@ -124,6 +124,8 @@
 
 
         <?= $content ?>
+	
+	<?= $footer;?>
             
     </body>
 </html>
