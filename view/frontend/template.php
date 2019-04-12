@@ -75,7 +75,6 @@
 								<?php endif;?>
 								 
 								<li><a href="index.php?action=aPropos">A propos</a></li>
-								<li><a href="#news">Rechercher</a></li>
 								<li><a href="index.php?action=contact">Contact</a></li>
 
 								<!-- Dropdown -

@@ -14,8 +14,8 @@
 
         <?php  while ($comment = $signaledComments->fetch()): ?>
 
-             <p> <b> article <?= $comment['post_id']?> </b> </p>
-             <p> <span class="author"><?= htmlspecialchars($comment['author'])?></span> le <?= $comment['comment_date_fr']?></p>
+            <a href="./index.php?action=editPost&id=<?= $comment['post_id'] ?>"> <p> <b> article <?= htmlspecialchars($comment['post_id']) ?> </b> </p> </a>
+            <p> <span class="author"><?= htmlspecialchars($comment['author'])?></span> le <?= $comment['comment_date_fr']?></p>
             <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
 
         <?php endwhile ?>
