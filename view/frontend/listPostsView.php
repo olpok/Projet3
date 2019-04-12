@@ -1,8 +1,4 @@
-
-<?php //$title = 'Blog de Jean Forteroche'; ?>
-
 <?php ob_start(); ?>
-
 <div class="container">
 
     <h1>Billet simple pour l'Alaska</h1>
@@ -24,9 +20,13 @@
     </div>
     <?php endwhile;?>
     <?php $posts->closeCursor(); ?>
-
 </div>
-
 <?php $content = ob_get_clean(); ?>
+
+<!--- creation du footer--->
+<?php ob_start();?>
+include('footer.php');
+<?php $footer = ob_get_clean(); ?>
+
+
 <?php require('template.php'); ?>
-<?php require('footer.php'); ?>
