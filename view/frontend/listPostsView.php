@@ -1,7 +1,5 @@
-
-<?php //$title = 'Blog de Jean Forteroche'; ?>
-
 <?php ob_start(); ?>
+
 
 <section class="sample-text-area">
 <div class="container">
@@ -25,11 +23,16 @@
     </div>
     <?php endwhile;?>
     <?php $posts->closeCursor(); ?>
-
 </div>
 
-</section>
 
+</section>
 <?php $content = ob_get_clean(); ?>
+
+<!--- creation du footer--->
+<?php ob_start();?>
+include('footer.php');
+<?php $footer = ob_get_clean(); ?>
+
+
 <?php require('template.php'); ?>
-<?php require('footer.php'); ?>
