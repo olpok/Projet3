@@ -11,7 +11,7 @@ class CommentManager extends Manager
     public function getComments($postId)
     {
         $db = $this->dbConnect();
-        $comments = $db->prepare('SELECT id, author, comment, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments WHERE post_id = ? ORDER BY comment_date DESC');
+        $comments = $db->prepare('SELECT id, author, comment, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin\') AS comment_date_fr FROM comments WHERE post_id = ? ORDER BY comment_date DESC');
         $comments->execute(array($postId));
 
         return $comments;
@@ -20,7 +20,7 @@ class CommentManager extends Manager
      public function getSignaledComments()
     {
         $db = $this->dbConnect();
-        $reqsignal = $db->query('SELECT id, post_id, author, comment, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments WHERE  priority = 1 ORDER BY post_id DESC');
+        $reqsignal = $db->query('SELECT id, post_id, author, comment, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin\') AS comment_date_fr FROM comments WHERE  priority = 1 ORDER BY post_id DESC');
 
         return $reqsignal;
     }
@@ -37,7 +37,7 @@ class CommentManager extends Manager
     public function getComment($commentId)
     {
         $db = $this->dbConnect();
-        $comment = $db->prepare('SELECT id, author, comment, post_id, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments WHERE id = ? ORDER BY comment_date DESC');
+        $comment = $db->prepare('SELECT id, author, comment, post_id, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin\') AS comment_date_fr FROM comments WHERE id = ? ORDER BY comment_date DESC');
         $comment->execute(array($commentId));
 
         return $comment;
@@ -64,7 +64,7 @@ class CommentManager extends Manager
     public function getCommentsAdmin($postId)
     {
         $db = $this->dbConnect();
-        $comments = $db->prepare('SELECT id, author, comment, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin%ss\') AS comment_date_fr FROM comments WHERE post_id = ? ORDER BY priority AND comment_date DESC');
+        $comments = $db->prepare('SELECT id, author, comment, DATE_FORMAT(comment_date, \'%d/%m/%Y à %Hh%imin\') AS comment_date_fr, priority FROM comments WHERE post_id = ? ORDER BY priority AND comment_date DESC');
         $comments->execute(array($postId));
 
         return $comments;

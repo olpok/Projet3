@@ -3,6 +3,7 @@
 
 <?php ob_start(); ?>
 
+<section class="sample-text-area">
 <div class="container">
 
     <h1>Billet simple pour l'Alaska</h1>
@@ -17,7 +18,7 @@
         </h3>
         
         <p>
-            <?= wordwrap($data['content'],20) ?>
+            <?= substr($data['content'], 0,100) ?>
             <em><a href="./index.php?action=post&id=<?= $data['id'] ?>">Commentaires</a></em>
         </p>
 
@@ -26,6 +27,8 @@
     <?php $posts->closeCursor(); ?>
 
 </div>
+
+</section>
 
 <?php $content = ob_get_clean(); ?>
 <?php require('template.php'); ?>

@@ -20,6 +20,7 @@ class Router
                         'listSignaledComments' => 'listSignaledComments',
                         'contact'     => 'formContact',
                         'aPropos' =>'aPropos',
+                        'mentionsLegales' => 'mentionsLegales',
                         'addComment' => 'addComment',
                         'edit' => 'edit',
                         'deleteC' => 'deleteC',
