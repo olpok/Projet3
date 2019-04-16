@@ -135,6 +135,8 @@
 
 
         <?= $content ?>
+	
+	<?= $footer;?>
             
     </body>
 </html>
