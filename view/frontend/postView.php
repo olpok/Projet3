@@ -2,6 +2,7 @@
 <!--<?php $title = 'Mon blog'; ?> -->
 <?php ob_start(); ?>
 
+    <section class="sample-text-area">
     <div class="container">
 
 
@@ -49,6 +50,7 @@
 
 
     </div>
+    </section>
 
 <?php $content = ob_get_clean(); ?>
 <?php require('template.php'); ?>

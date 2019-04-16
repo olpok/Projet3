@@ -4,6 +4,7 @@
 
 <?php ob_start(); ?>
 
+<section class="sample-text-area">
 <div class="container">
 
     <h2>Billet simple pour l'Alaska</h2> </br> 
@@ -26,6 +27,7 @@
 
 
 </div>
+</section>
 
 <?php $content = ob_get_clean(); ?> 
 <?php require('view/frontend/template.php'); ?>
