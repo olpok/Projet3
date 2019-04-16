@@ -5,6 +5,8 @@ class myConfig
 {
 
   public static function bootApp() {
+
+        session_start();
         
         require('controller/frontend.php');
 
