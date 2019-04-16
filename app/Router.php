@@ -135,10 +135,6 @@ $routes = array(
 
 try { // On essaie de faire des choses
 
-
-
-    echo $action; 
-
         // si mon action demandée existe
         if(array_key_exists($action, $routes)) {
 
