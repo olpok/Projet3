@@ -10,7 +10,8 @@
                                 <h6>MÉTA</h6>
                                 <ul class="footer-nav"> 
                                     <li><a href="index.php?action=login">Administration</a></li>
-                                    <li><a href="#">Mentions legales</a></li>
+                                    <li><a href="index.php?action=mentionsLegales">Mentions legales</a></li> <br>
+                                    <li>CE SITE EST UN FAUX. IL EST RÉALISÉ DANS LE CADRE D’EXERCICE GESTION DE PROJET DIGITAL.</li>          
                                 </ul>
                             </div>
                         </div>

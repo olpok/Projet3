@@ -194,6 +194,11 @@ function aPropos()
    require('view/frontend/aPropos.php') ;
 }
 
+function mentionsLegales()
+{
+   require('view/frontend/mentionsLegales.php') ;
+}
+
 function p404()
 {
    require('view/frontend/404.php') ;

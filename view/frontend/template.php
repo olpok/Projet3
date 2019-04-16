@@ -47,7 +47,7 @@
     <body>
 
 			<!-- Start banner Area -->
-			<section class="generic-banner relative">
+
 			<!-- Start Header Area -->
 			<header class="default-header">
 				<nav class="navbar navbar-expand-lg navbar-light">
@@ -59,14 +59,16 @@
 						    <span class="navbar-toggler-icon"></span>
 						  </button>
 
+
+
 						  <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
 						    <ul class="navbar-nav">
 								<li><a href="index.php?action=home">Home</a></li>
 								<?php if(isset($_SESSION['authentification']) && $_SESSION['role'] = 'admin') : ?>
 									<li class="dropdown">
-										<a href="index.php?action=login">Admin</a>
+										<a class="dropdown-toggle" href="index.php?action=login" id="navbardrop" data-toggle="dropdown">Admin</a>
 										<div class="dropdown-menu">
-									    	<!--  <a class="dropdown-item" href="index.php?action=login">Articles</a> --> 
+									    	<a class="dropdown-item" href="index.php?action=login">Articles</a> 
 									        <a class="dropdown-item" href="index.php?action=formAddPost">Ajouter article</a>
 									        <a class="dropdown-item" href="index.php?action=listSignaledComments">Commentaires</a>
 									        <a class="dropdown-item" href="index.php?action=logout">Déconnexion</a>
@@ -99,20 +101,29 @@
 
 
 
-
-		<!-- End Header Area 	-->				
+			 <!--	 start banner Area --->
+				<section class="banner-area relative" id="home" data-parallax="scroll" data-image-src="public/img/header-bg.jpg">
+				<div class="overlay-bg overlay"></div>
 				<div class="container">
-					<div class="row height align-items-center justify-content-center">
-						<div class="col-lg-10">
-							<div class="generic-banner-content">
-								<h2 class="text-white text-center">Billet simple pour l'Alaska</h2>
-								<p class="text-white">It won’t be a bigger problem to find one video game lover in your <br> neighbor. Since the introduction of Virtual Game.</p>
-							</div>							
-						</div>
+					<div class="row fullscreen">
+						<div class="banner-content d-flex align-items-center col-lg-12 col-md-12">
+							<h1>
+								Billet simple pour l'Alaska							
+							</h1>
+						</div>	
+												
 					</div>
 				</div>
-			</section>		
-			<!-- End banner Area -->
+			</section>
+			 <!--End banner Area-->		
+
+	
+
+
+
+
+
+
 
 		 		
 			<?php if(isset($_SESSION['flashMessage'])):?>
@@ -124,6 +135,8 @@
 
 
         <?= $content ?>
+	
+	<?= $footer;?>
             
     </body>
 </html>
