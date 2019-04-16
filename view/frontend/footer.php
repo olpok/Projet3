@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-
+<?//php ob_start(); ?>
 <!-- start footer Area -->      
             <footer class="footer-area section-gap">
                 <div class="container">
@@ -73,8 +71,7 @@
             <script src="public/js/jquery.sticky.js"></script>
             <script src="public/js/main.js"></script>  
 
+<?//php $footer = ob_get_clean(); ?>
 
 
-
-</html>
 

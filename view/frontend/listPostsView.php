@@ -29,10 +29,12 @@
 </section>
 <?php $content = ob_get_clean(); ?>
 
-<!--- creation du footer--->
-<?php ob_start();?>
-include('footer.php');
-<?php $footer = ob_get_clean(); ?>
 
 
 <?php require('template.php'); ?>
+
+<!--- creation du footer--->
+<?//php ob_start();?>
+
+<?php include('footer.php');?>
+<?php //$footer = ob_get_clean(); ?>
