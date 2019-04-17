@@ -1,10 +1,27 @@
 <?php
+/*
+session_start();
+
+use \Tests\POOblog\app\Router;
+
+require_once('config.php');
+
+myConfig::bootApp();
 
 
 
+
+ (isset($_GET['action'])) ? $action = $_GET['action'] : $action = "listPosts";
+
+$router = new Router($action);
+$router->render();
+
+*/
 
 
 session_start();
+
+
 
 use \Tests\POOblog\app\Router;
 
@@ -20,13 +37,9 @@ function chargerClasse($classe)
 
 spl_autoload_register('chargerClasse'); // On enregistre la fonction en autoload pour qu'elle soit appelée dès qu'on instanciera une classe non déclarée.
 
-/*
-require_once('app/Router.php');*/
-
 
 
  (isset($_GET['action'])) ? $action = $_GET['action'] : $action = "listPosts";
 
 $router = new Router($action);
 $router->render();
-
