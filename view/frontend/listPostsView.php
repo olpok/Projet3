@@ -1,8 +1,14 @@
+<!--- creation  header--->
+<?php ob_start(); ?>
+<?php require('headerHome.php');?>
+<?php $header = ob_get_clean(); ?>
+<!--- end header--->
+
+
 <?php ob_start(); ?>
 
 
-<section class="sample-text-area">
-<div class="container">
+<section class="sample-text-area"><div class="container">
 
     <h1>Billet simple pour l'Alaska</h1>
     <p>Derniers billets du blog :</p>
@@ -16,25 +22,30 @@
         </h3>
         
         <p>
-            <?= substr($data['content'], 0,100) ?>
-            <em><a href="./index.php?action=post&id=<?= $data['id'] ?>">Commentaires</a></em>
+            <?= substr($data['content'], 0,400) ?> <br>
+            <em><a  class="genric-btn default-border circle" href="./index.php?action=post&id=<?= $data['id'] ?>">Voir plus</a></em>
+            <em><a  class="genric-btn info-border circle" href="./index.php?action=post&id=<?= $data['id'] ?>">Voir plus</a></em>
         </p>
+
+
 
     </div>
     <?php endwhile;?>
     <?php $posts->closeCursor(); ?>
+
 </div>
-
-
 </section>
+
 <?php $content = ob_get_clean(); ?>
+
+
 
 
 
 <?php require('template.php'); ?>
 
 <!--- creation du footer--->
-<?//php ob_start();?>
+<?php //ob_start(); ?>
 
-<?php include('footer.php');?>
+<?php require('footer.php');?>
 <?php //$footer = ob_get_clean(); ?>

@@ -48,7 +48,7 @@ class Router
         try 
         {   // On essaie de faire des choses
 
-            echo $this->action; 
+          //  echo $this->action; 
 
             // si mon action demandé existe
             if(array_key_exists($this->action, $this->routes)) 

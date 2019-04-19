@@ -1,4 +1,9 @@
-<?php //$title = 'Mon blog'; ?> 
+<!--- creation  header--->
+<?php ob_start(); ?>
+<?php require('headerPage.php');?>
+<?php $header = ob_get_clean(); ?>
+<!--- end header--->
+
 <?php ob_start(); ?>
 
 

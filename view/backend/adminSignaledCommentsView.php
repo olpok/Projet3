@@ -1,5 +1,11 @@
+<!--- creation  header--->
+<?php ob_start(); ?>
+<?//php require('./view/headerPage.php');?>
+<?php require('./view/headerPage.php');?>
+<?php $header = ob_get_clean(); ?>
+<!--- end header--->
 
-<?php //$title = 'Blog de Jean Forteroche'; ?>
+
 <?php ob_start();?>
 
     <section class="sample-text-area">

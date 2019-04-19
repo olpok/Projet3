@@ -1,5 +1,9 @@
+<!--- creation  header--->
+<?php ob_start(); ?>
+<?php require('headerPage.php');?>
+<?php $header = ob_get_clean(); ?>
+<!--- end header--->
 
-<!--<?php $title = 'Mon blog'; ?> -->
 <?php ob_start(); ?>
 
     <section class="sample-text-area">
@@ -39,7 +43,7 @@
 
         <?php  while ($comment = $comments->fetch()): ?>
 
-             <p><span class="author"><?= htmlspecialchars($comment['author'])?></span> le <?= $comment['comment_date_fr']?></p>
+             <p><em><?= htmlspecialchars($comment['author'])?></em> le <?= $comment['comment_date_fr']?></p>
              <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
 
             <div class="button-group-area mt-10">
