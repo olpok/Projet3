@@ -1,6 +1,6 @@
 <!--- creation  header--->
 <?php ob_start(); ?>
-<?php require('./view/headerPage.php');?>
+<?php require('view/frontend/headerPage.php');?>
 <?php $header = ob_get_clean(); ?>
 <!--- end header--->
 
@@ -44,7 +44,7 @@
 
             <?php if ($comment['priority'] != 0):?>
 
-            <div style="color:red">  
+            <div  class="signaled-comments" >  
                 <p> <em> <?=  htmlspecialchars($comment['author'])?></em> le <?= $comment['comment_date_fr']?></p>       
                 <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
             </div>

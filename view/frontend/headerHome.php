@@ -6,7 +6,7 @@
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <div class="container">
                           <a class="navbar-brand" href="index.php">
-                            <img src="public/img/logo.png" alt="">
+                            <img src="public/img/logo.png" alt="logo">
                           </a>
                           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -43,7 +43,7 @@
 
 
              <!--    start banner Area --->
-                <section class="banner-area relative" id="home" data-parallax="scroll" data-image-src="public/img/header-bg.jpg">
+                <section class="banner-area relative" id="home" data-parallax="scroll" data-image-src="public/img/header16 (5).jpg">
                 <div class="overlay-bg overlay"></div>
                 <div class="container">
                     <div class="row fullscreen">

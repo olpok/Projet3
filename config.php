@@ -6,7 +6,7 @@ class myConfig
 
   public static function bootApp() {
 
-        //session_start();
+        session_start();
         
         require('controller/frontend.php');
 
@@ -14,10 +14,10 @@ class myConfig
         {
           $namespaces = ['Tests\POOblog\app', 'Tests\POOblog\model'];
           $classe = str_replace($namespaces, '', $classe);
-          if(file_exist('app/'. $classe . '.php') {
-             require ('app/'. $classe . '.php');
+          if(file_exists('app/'. $classe . '.php')) 
+            {require('app/'. $classe . '.php');
           }
-          if(file_exist('model/'. $classe . '.php') {
+          if(file_exists('model/'. $classe . '.php')) {
              require ('model/'. $classe . '.php');
           }
         }

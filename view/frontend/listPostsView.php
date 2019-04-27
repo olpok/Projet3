@@ -24,10 +24,7 @@
         <p>
             <?= substr($data['content'], 0,400) ?> <br>
             <em><a  class="genric-btn default-border circle" href="./index.php?action=post&id=<?= $data['id'] ?>">Voir plus</a></em>
-            <em><a  class="genric-btn info-border circle" href="./index.php?action=post&id=<?= $data['id'] ?>">Voir plus</a></em>
         </p>
-
-
 
     </div>
     <?php endwhile;?>
@@ -39,13 +36,5 @@
 <?php $content = ob_get_clean(); ?>
 
 
-
-
-
 <?php require('template.php'); ?>
-
-<!--- creation du footer--->
-<?php //ob_start(); ?>
-
 <?php require('footer.php');?>
-<?php //$footer = ob_get_clean(); ?>

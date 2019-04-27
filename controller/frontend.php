@@ -139,14 +139,7 @@ function signing ()
        
 
   	   if($user = $userManager->getUserByIdent($ident_form)) { // test si le user existe 
-            echo '<br/>';
-            echo sha1($password_form); 
-
-
-            echo '<br/>';
-            echo $user['login'];
-            echo '<br/>';
-
+ 
             if(sha1($password_form) == $user['login'])  { // check password
                
                 $_SESSION['authentification'] = 1;
@@ -205,33 +198,32 @@ function p404()
 }
 
 function addPost()
-
 {
-    if( !isset($_SESSION['role']) OR $_SESSION['role'] != 'admin' )
+    if( !isset($_SESSION['role']) OR $_SESSION['role'] != 'admin' ) {
+        $_SESSION['flashMessage'] = 'Impossible !'; // quand on n'est pas identifié
+        header('Location: index.php?action=login');
+    }
+            
+    $title = $_POST['title']; $content =  $_POST['content'];
 
-        {
-                $_SESSION['flashMessage'] = 'Impossible !';
-         }
-            $title = $_POST['title']; $content =  $_POST['content'];
+    if($title != "" && $content != "") {
 
-            if($title != "" && $content != "") {
-                $postManager = new PostManager();
-                $addedLines = $postManager->postPost($title,$content);
+        $postManager = new PostManager();
+        $addedLines = $postManager->postPost($title,$content);
 
-                $posts = $postManager->getPosts(); 
+        $posts = $postManager->getPosts(); 
 
-                if ($addedLines === false ) {
-                    $_SESSION['flashMessage'] = 'Impossible d\'ajouter le billet !';
-                    }
-                else {
-                    $_SESSION['flashMessage'] = 'votre article a bien été ajouté !';
-                    require('view/backend/adminView.php');   
-                    }
-            }           
-    else {
-            $_SESSION['flashMessage'] = 'Auteur ou contenu vide !';
-            require('view/backend/adminAddPostView.php') ;
-        }    
+        if ($addedLines === false ) {
+            $_SESSION['flashMessage'] = 'Impossible d\'ajouter le billet !';
+            header('Location: index.php?action=formAddPost');
+        } else {
+            $_SESSION['flashMessage'] = 'votre article a bien été ajouté !';
+            header('Location: index.php?action=login');
+        }
+    } else {
+        $_SESSION['flashMessage'] = 'Auteur ou contenu vide !';
+        header('Location: index.php?action=formAddPost');
+    }    
 }
 
 function editPost()

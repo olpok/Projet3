@@ -1,6 +1,6 @@
 <!--- creation  header--->
 <?php ob_start(); ?>
-<?php require('./view/headerPage.php');?>
+<?php require('view/frontend/headerPage.php');?>
 <?php $header = ob_get_clean(); ?>
 <!--- end header--->
 

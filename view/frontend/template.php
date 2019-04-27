@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 
-<html lang="zxx" class="no-js"> 
+<html lang="fr" class="no-js"> 
 	<head>
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Favicon-->
 		<link rel="shortcut icon" href="public/img/fav.png">
 		<!-- Author Meta -->
-		<meta name="author" content="colorlib">
+		<meta name="author" content="Olga Pokalchuk">
 		<!-- Meta Description -->
-		<meta name="description" content="">
-		<!-- Meta Keyword -->
-		<meta name="keywords" content="">
+		<meta name="description" content="..recherche moteur...">
 		<!-- meta character set -->
 		<meta charset="UTF-8">
 
@@ -20,7 +18,7 @@
        <!--   <title><?= $title ?></title>
        <?php //$title = 'Blog de Jean Forteroche'; ?> -->       
 
-      <!--    <link href="public/css/style.css" rel="stylesheet" /> -->
+     
 	
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
@@ -33,18 +31,21 @@
 		<link rel="stylesheet" href="public/css/owl.carousel.css">
 		<link rel="stylesheet" href="public/css/main.css">
 
+ 		<link rel="stylesheet" href="public/css/style.css"  /> 
 	</head>
         
     <body>
     	
     		<?= $header ?>
-		 		
-				<?php if(isset($_SESSION['flashMessage'])):?>
-					<div class="genric-btn danger circle arrow" >            	
+			<?php if(isset($_SESSION['flashMessage'])):?>
+				<div class="flashMessage">
+					<div class="genric-btn danger circle arrow">            	
 	                	<?= $_SESSION['flashMessage'];?>
 	                	<?php unset($_SESSION['flashMessage']);?>
 	            	</div>
-	        	<?php endif;?>
+            	</div>
+        	<?php endif;?>
+
 
         	<?= $content ?>
             
