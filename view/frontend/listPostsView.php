@@ -10,7 +10,7 @@
 
 <section class="sample-text-area"><div class="container">
 
-    <h1>Billet simple pour l'Alaska</h1>
+    <h1> <span>Blog de Jean Forteroche </span> </h1><br> 
     <p>Derniers billets du blog :</p>
 
 

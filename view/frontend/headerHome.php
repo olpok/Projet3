@@ -43,13 +43,13 @@
 
 
              <!--    start banner Area --->
-                <section class="banner-area relative" id="home" data-parallax="scroll" data-image-src="public/img/header16 (5).jpg">
+                <section class="banner-area relative" id="home" data-parallax="scroll" data-image-src="public/img/header16 (4).jpg">
                 <div class="overlay-bg overlay"></div>
                 <div class="container">
                     <div class="row fullscreen">
                         <div class="banner-content d-flex align-items-center col-lg-12 col-md-12">
                             <h1>
-                                Billet simple pour l'Alaska                         
+                                Billet simple pour l'Alaska                          
                             </h1>
                         </div>  
                        </div>                           

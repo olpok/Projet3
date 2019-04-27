@@ -46,9 +46,9 @@
              <p><em><?= htmlspecialchars($comment['author'])?></em> le <?= $comment['comment_date_fr']?></p>
              <p><?= nl2br(htmlspecialchars($comment['comment'])) ?></p>
 
-            <div class="button-group-area mt-10">
+                <div class="button-group-area mt-10">
                 <a href="index.php?action=signal&amp;idP=<?=$post['id'] ?>&amp;idC=<?php echo $comment['id']?>" class="genric-btn default-border">Signaler</a>
-            </div>
+                </div>
 
         <?php endwhile ?>
 

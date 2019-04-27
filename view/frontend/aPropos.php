@@ -16,7 +16,8 @@
 
             <h3 class="mb-30">A propos</h3>
       
-            <b> BLOG DE JEAN FORTEROCHE </b>. Un blog, anglicisme pouvant être francisé en blogue1,2, carnet Web2, <b>cybercarnet2</b> ou bloc-notes3, est un type de site web — ou une partie d'un site web — utilisé pour la ublication périodique et régulière d'articles personnels, généralement succincts, rendant compte d'une actualité autour d'un sujet donné ou d'une profession. <br> À la manière d'un journal intime, ces articles ou <i>« billets »</i>i> sont typiquement datés, signés et présentés dans un ordre antéchronologique, c'est-à-dire du plus récent au plus ancien.
+            <h5> BLOG DE JEAN FORTEROCHE </h5> <br>
+            <b> Un blog </b>, anglicisme pouvant être francisé en blogue1,2, carnet Web2, <b>cybercarnet2</b> ou bloc-notes3, est un type de site web — ou une partie d'un site web — utilisé pour la ublication périodique et régulière d'articles personnels, généralement succincts, rendant compte d'une actualité autour d'un sujet donné ou d'une profession. <br> À la manière d'un journal intime, ces articles ou <i>« billets »</i>i> sont typiquement datés, signés et présentés dans un ordre antéchronologique, c'est-à-dire du plus récent au plus ancien.
             <br><br>
             Au printemps 2011, on dénombrait au moins 156 millions de blogs et pas moins d'un million de nouveaux articles de blog publiés chaque jour4. On recensait, en 2012, 31 millions de blogs aux <sup>États-Unis</sup> alors que dans le monde on estime à trois millions le nombre de blogs qui naissent chaque mois6. Toutefois, le nombre de blogs inactifs demeure élevé. Rares sont en effet ceux qui affichent une grande longévité et la majorité d'entre eux est abandonnée par leurs auteurs. 
             <br><br>

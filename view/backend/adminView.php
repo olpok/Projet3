@@ -20,8 +20,7 @@
 
       <div >
         
-          <h3>
-              <!--    <?= htmlspecialchars($data['title']) ?> --> 
+          <h3> 
               <a href="./index.php?action=editPost&id=<?= $data['id'] ?>"> <?= htmlspecialchars($data['title']) ?>
               <em>le <?= $data['creation_date_fr'] ?></em></a>
           </h3>

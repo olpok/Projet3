@@ -31,7 +31,6 @@ function post()
 }
 
 function addComment()
-
 {
     if (isset($_GET['id']) && $_GET['id'] > 0){
 
@@ -50,15 +49,6 @@ function addComment()
             header('Location: index.php?action=post&id=' . $postId); 
         } 
     }    
-}
-
- function edit()
-{ 
-    $commentId = $_GET['id'];
-    $commentManager = new CommentManager();
-    $comments=$commentManager->getComment($commentId);
-
-    require('view/frontend/commentView.php');
 }
 
 function signal()
@@ -113,7 +103,6 @@ function deleteC()
 
 function formAdmin()
 {
-
     if(isset($_SESSION['authentification']) && $_SESSION['role'] = 'admin'){
 
         $postManager = new PostManager(); 
@@ -126,7 +115,6 @@ function formAdmin()
           require('view/frontend/form_admin.php');
     }
 }
-
 
 function signing ()
 {
@@ -153,7 +141,6 @@ function signing ()
        else {
                 $_SESSION['flashMessage'] = 'Identifiant n\'existe pas !';
        } 
-
 	} 
 
     header('Location: index.php?action=login');
@@ -227,9 +214,7 @@ function addPost()
 }
 
 function editPost()
-
 {
-
     $postId = $_GET['id'];
 
     $postManager = new PostManager();
@@ -244,9 +229,7 @@ function editPost()
 }
 
 function updateP()
-
 {
-
 	if (!empty($_POST['title']) && !empty($_POST['content'])) {
 
         $postId = $_GET['id']; 
@@ -270,9 +253,7 @@ function updateP()
     else {  
         header('Location: index.php?action=editPost&id=' . $postId); 
     } 
-
 } 
-
 
 function deleteP()
 {
@@ -281,7 +262,6 @@ function deleteP()
     $postManager = new PostManager();
  
     $deletedPostLines = $postManager->deletePost($postId);
-
     $posts = $postManager->getPosts();
 
      if ($deletedPostLines === false) {
