@@ -26,7 +26,7 @@
           </h3>
    
           <p>
-              <?= $data['content'] ?>
+              <?= substr($data['content'], 0,400)?>
               <p> <a href="./index.php?action=deleteP&id=<?= $data['id'] ?>">Supprimer</a> </p>
           </p>
 
