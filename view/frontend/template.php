@@ -20,6 +20,7 @@
 		CSS
 		============================================= -->
 		<link rel="stylesheet" href="public/css/linearicons.css">
+		<link rel="stylesheet" href="public/css/font-awesome.min.css">
 		<link rel="stylesheet" href="public/css/bootstrap.css">
 		<link rel="stylesheet" href="public/css/owl.carousel.css">
 		<link rel="stylesheet" href="public/css/main.css">

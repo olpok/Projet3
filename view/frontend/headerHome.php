@@ -43,7 +43,7 @@
 
 
              <!--    start banner Area --->
-                <section class="banner-area relative" id="home" data-parallax="scroll" data-image-src="public/img/header16 (4).jpg">
+                <section class="banner-area relative" id="home" data-parallax="scroll" data-image-src="public/img/header16.jpg">
                 <div class="overlay-bg overlay"></div>
                 <div class="container">
                     <div class="row fullscreen">

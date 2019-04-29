@@ -88,6 +88,11 @@ function listSignaledComments()
  
 function deleteC()
 {
+    if( !isset($_SESSION['role']) OR $_SESSION['role'] != 'admin' ) {
+        $_SESSION['flashMessage'] = 'Impossible !'; // quand on n'est pas identifié
+        header('Location: index.php?action=login');
+    }
+
     $commentId = $_GET['comment_id'];
 
     $commentManager = new CommentManager();
@@ -112,7 +117,7 @@ function formAdmin()
     }
 
     else {
-          require('view/frontend/form_admin.php');
+        require('view/frontend/form_admin.php');
     }
 }
 
@@ -215,6 +220,11 @@ function addPost()
 
 function editPost()
 {
+    if( !isset($_SESSION['role']) OR $_SESSION['role'] != 'admin' ) {
+        $_SESSION['flashMessage'] = 'Impossible !'; // quand on n'est pas identifié
+        header('Location: index.php?action=login');
+    }
+
     $postId = $_GET['id'];
 
     $postManager = new PostManager();
@@ -230,6 +240,11 @@ function editPost()
 
 function updateP()
 {
+    if( !isset($_SESSION['role']) OR $_SESSION['role'] != 'admin' ) {
+        $_SESSION['flashMessage'] = 'Impossible !'; // quand on n'est pas identifié
+        header('Location: index.php?action=login');
+    }
+
 	if (!empty($_POST['title']) && !empty($_POST['content'])) {
 
         $postId = $_GET['id']; 
@@ -257,6 +272,11 @@ function updateP()
 
 function deleteP()
 {
+    if( !isset($_SESSION['role']) OR $_SESSION['role'] != 'admin' ) {
+        $_SESSION['flashMessage'] = 'Impossible !'; // quand on n'est pas identifié
+        header('Location: index.php?action=login');
+    }
+
     $postId = $_GET['id'];
 
     $postManager = new PostManager();
